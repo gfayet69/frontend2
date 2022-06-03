@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h2> Ajouter un cours</h2>
+    </div>
+    <div class="row">
+        <form [formGroup]="addCours" novalidate class="form">
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class = "col-md-4">grCM</div>
+            <div class = "col-md-4"><input type="number" formControlName="grCM" class="'form-control"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class = "col-md-4">grTP</div>
+            <div class = "col-md-4"><input type="number" formControlName="grTP" class="'form-control"></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class = "col-md-4">grTD</div>
+            <div class = "col-md-4"><input type="number" value="192" formControlName="grTD" class="'form-control" ></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class = "col-md-8"><button type="submit" (click) = "onSubmit()" class="btn btn-success">Ajouter</button></div>
+        </div>
+        
+        </form>
+    </div>
+</div>

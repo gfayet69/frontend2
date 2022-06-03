@@ -1,0 +1,43 @@
+<div class="row" style="margin-left:20px">
+    <div class="col-md-12 text-center">
+        <h2>Liste d'enseignants</h2>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <th>
+                    Cours
+                </th>
+                <th>
+                    grCM
+                </th>
+                <th>
+                    grTP
+                </th>
+                <th>
+                    grTD
+                </th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let enseigne of enseignes">
+                    <td>
+                        {{enseigne.cours.Ref}}
+                    </td>
+                    <td>
+                        {{enseigne.grCM}}
+                    </td>
+                    <td>
+                        {{enseigne.grTP}}
+                    </td>
+                    <td>
+                        {{enseigne.grTD}}
+                    </td>
+                    <td>
+                    <a *ngIf="user.statut=='Admin'" href="edit-enseigne/{{enseigne._id}}" class ="btn btn-success">EDIT</a>
+                    <button *ngIf="user.statut=='Admin'" (click)="delEnseigne(enseigne)" class="btn btn-danger">DELETE</button> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

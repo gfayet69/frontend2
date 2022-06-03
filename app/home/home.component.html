@@ -1,0 +1,55 @@
+<div class="row" style="margin-left:20px">
+    <div class="col-md-12 text-center">
+        <h2>Bonjour</h2>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <th>
+                    Identifiant
+                </th>
+                <th>
+                    Nom
+                </th>
+                <th>
+                    Prenom
+                </th>
+                <th>
+                    Statut
+                </th>
+                <th>
+                    UC à faire
+                </th>
+                <th>
+                    Somme des UCs actuels
+                </th>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        {{user.identifiant}}
+                    </td>
+                    <td>
+                        {{user.nom}}
+                    </td>
+                    <td>
+                        {{user.prenom}}
+                    </td>
+                    <td>
+                        {{user.statut}}
+                    </td>
+                    <td>
+                        {{user.nbHmini}}
+                    </td>
+                    <td [ngStyle]="{color:getColor()}">
+                        {{sum}}
+                    </td>
+                    <td>
+                        <a href="getEnseigneCours/{{user._id}}" class="btn btn-primary">Voir les cours</a>
+                        <a href="edit-user/{{user._id}}" class ="btn btn-success">EDIT</a>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

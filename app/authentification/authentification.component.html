@@ -1,0 +1,9 @@
+
+        <form [formGroup]="form">
+            <div class="form-row align-items-center">
+                <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
+                <input formControlName="identifiant" type="text" class="form-control" placeholder="Identifiant" required style="width:200px ;">
+                <input formControlName="password" type="password" class="form-control" placeholder="Password" required style="width:200px ;">
+                <button class="btn btn-lg btn-primary btn-block" style="margin-top:20px;width:200px ;" type="submit"  (click) = "onSubmit()" >Se connecter</button>
+            </div>
+        </form>

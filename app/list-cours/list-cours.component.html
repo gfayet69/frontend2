@@ -1,0 +1,68 @@
+<div class="row" style="margin-left:20px">
+    <div class="col-md-12 text-center">
+        <h2>Liste des cours</h2>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <th>
+                    Formation
+                </th>
+                <th>
+                    Semestre
+                </th>
+                <th>
+                    Ref
+                </th>
+                <th>
+                    Statut
+                </th>
+
+                <th>
+                    Effectif
+                </th>
+                <th>
+                    grCM
+                </th>
+                <th>
+                    grTP
+                </th>
+                <th>
+                    grTD
+                </th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ue of ues">
+                    <td>
+                        {{ue.Formation}}
+                    </td>
+                    <td>
+                        {{ue.Semestre}}
+                    </td>
+                    <td>
+                        {{ue.Ref}}
+                    </td>
+                    <td>
+                        {{ue.Statut}}
+                    </td>
+                    <td>
+                        {{ue.Effectif}}
+                    </td>
+                    <td>
+                        {{ue.grCM}}
+                    </td>
+                    <td>
+                        {{ue.grTP}}
+                    </td>
+                    <td>
+                        {{ue.grTD}}
+                    </td>
+                    <td>
+                        <a button type="submit" (click)="onSubmit(ue._id)"  class="btn btn-primary">Prendre ce cours</a>
+                        <a href="getEnseigneUser/{{ue._id}}" class="btn btn-primary">Voir les enseignants</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

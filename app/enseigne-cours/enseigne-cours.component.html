@@ -1,0 +1,37 @@
+<div class="row" style="margin-left: 20px;">
+    <div class="col-md-12 text-center">
+        <h2>Liste d'enseignants</h2>
+    </div>
+    <div class="row">
+        <table class="table">
+            <thead>
+                <th>
+                    User
+                </th>
+                <th>
+                    Nom
+                </th>
+                <th>
+                    Prenom
+                </th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users">
+                    <td>
+                        {{user.identifiant}}
+                    </td>
+                    <td>
+                        {{user.nom}}
+                    </td>
+                    <td>
+                        {{user.prenom}}
+                    </td>
+                    <td>
+                    <a *ngIf="userConnected.statut=='Admin'" href="edit-enseigne/{{user._id}}" class ="btn btn-success">EDIT</a>
+                    <button *ngIf="userConnected.statut=='Admin'" (click)="delEnseigne(users)" class="btn btn-danger">DELETE</button> 
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
